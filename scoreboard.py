@@ -13,12 +13,11 @@ class Scoreboard(Turtle):
             self.highscore=int(data.read())
         self.hideturtle()
         self.update_scoreboard()
-
-
+# updating the score board
     def update_scoreboard(self):
         self.clear()
         self.write(arg=f"SCORE: {self.score} HIGH SCORE:{self.highscore}", align=ALIGNMENT, font=FONT)
-
+# Resets the snake coordinates
     def reset(self):
         if self.score>self.highscore:
             self.highscore=self.score
